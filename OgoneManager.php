@@ -135,10 +135,10 @@ class OgoneManager
 
         switch ($this->environment) {
             case 'prod':
-                $paymentRequest->setOgoneUri(EcommercePaymentRequest::PRODUCTION);
+                $paymentRequest->setOgoneUri('https://internetkassa.abnamro.nl/ncol/prod/orderstandard.asp');
                 break;
             default:
-                $paymentRequest->setOgoneUri(EcommercePaymentRequest::TEST);
+                $paymentRequest->setOgoneUri('https://internetkassa.abnamro.nl/ncol/test/orderstandard.asp');
                 break;
         }
 
